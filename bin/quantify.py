@@ -3,8 +3,6 @@
 from __future__ import print_function # load print function in python3
 from collections import defaultdict
 import math, sys, os, re, pysam, time
-from lifelines import KaplanMeierFitter
-kmf = KaplanMeierFitter()
 # set up auto dictionary function
 def auto_dict():
     return defaultdict(auto_dict)
@@ -229,7 +227,6 @@ for gene in geneStructureInformation:
     qualitycheck = auto_dict()
     
     for readName in sameReadCount:
-        
         # load CIGAR information
         cigarNumberRead1 = auto_dict()
         cigarNumberRead2 = auto_dict()

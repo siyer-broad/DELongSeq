@@ -56,7 +56,7 @@ def parse_argument(validArgList, addAbsPath, warnMessage):
     return outList
 
 # check modules ### NOT WORKING!!
-import imp
+import importlib as imp
 def check_module_exists(name):
     try:
         imp.find_module(name)
